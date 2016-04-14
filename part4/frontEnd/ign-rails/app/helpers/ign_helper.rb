@@ -1,0 +1,2 @@
+module IgnHelper
+end

@@ -1,0 +1,24 @@
+<% @articles.each_with_index do |article, index| %>
+    <a href="<%= article.url %>">
+        <div class="hover-row">
+            <img class="hover-img" src="<%= article.thumbnail %>" alt="">
+            
+                <div class="col-xs-2">
+                    <h4 class="hover-row-center hover-row-highlight"><%= index + 1 %></h4>
+                </div>
+                
+                <div class="col-xs-8">
+                    <h4 class="hover-row-highlight"><%= article.title %></h4>
+                    <h5><%= article.description %></h5>
+                </div>
+        </div>
+    </a>
+<% end %>
+
+<div class="col-xs-8 col-xs-offset-2">
+    <a href=""><h4>SEE MORE ARTICLES</h4></a>
+</div>
+
+
+
+

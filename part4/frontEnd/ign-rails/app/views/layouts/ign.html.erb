@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="row top-buffer"></div>
+
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+        
+        <div class="row">
+            
+                <div class="btn-group btn-group-justified btn-group-lg">
+                    <a class="btn <%= 'current' if params[:action] == 'articles' %>" href="articles">Articles</a>
+                    <a class="btn <%= 'current' if params[:action] == 'videos' %>" href="videos">Videos</a>
+                </div>
+            
+        </div>
+        
+        <div class="row top-buffer">
+            <!--yield each table-->
+            <%= yield %>
+        </div>
+        
+    </div>
+</div>
+
+<div class="row top-buffer"></div>
+
+</body>
+</html>

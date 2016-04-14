@@ -1,0 +1,26 @@
+<% @videos.each_with_index do |video, index| %>
+    <a href="<%= video.url %>">
+        <div class="hover-row">
+            <img class="hover-img" src="<%= video.thumbnail %>" alt="">
+            
+                <div class="col-xs-2">
+                    <h4 class="hover-row-center hover-row-highlight"><%= index + 1 %></h4>
+                </div>
+                
+                <div class="col-xs-8">
+                    <h4 class="hover-row-highlight"><%= video.title %></h4>
+                    <p><%= video.description %></p>
+                    
+                </div>
+                
+                <div class="col-xs-2">
+                    <h5 class="hover-row-center"><%= video.duration %></h5>
+                </div>
+            
+        </div>
+    </a>
+<% end %>
+
+<div class="col-xs-8 col-xs-offset-2">
+    <a href=""><h4>SEE MORE VIDEOS</h4></a>
+</div>
